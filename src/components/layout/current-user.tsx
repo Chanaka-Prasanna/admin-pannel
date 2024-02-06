@@ -5,6 +5,7 @@ import type { User } from "@/graphql/schema.types"; // look at from 59 minute to
 import { Text } from "../text";
 import { SettingOutlined } from "@ant-design/icons";
 import { useState } from "react";
+import { AccountSettings } from "./account-settings";
 
 const CurrentUser = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,7 +59,13 @@ const CurrentUser = () => {
           style={{ cursor: "pointer" }}
         />
       </Popover>
-      {user && <AccountSettings />}
+      {user && (
+        <AccountSettings
+          opened={isOpen}
+          setOpened={setIsOpen}
+          userId={user.id}
+        />
+      )}
     </div>
   );
 };

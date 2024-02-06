@@ -1,18 +1,18 @@
-
-import React from 'react'
-import {  ThemedLayoutV2, ThemedTitleV2 } from '@refinedev/antd'
+import React from "react";
+import { ThemedLayoutV2, ThemedTitleV2 } from "@refinedev/antd";
 import { Header } from "./header";
 
-
-const Layout = ({children}:React.PropsWithChildren) => {
+const Layout = ({ children }: React.PropsWithChildren) => {
   return (
     <ThemedLayoutV2
       Header={Header}
-      Title={(titleProps)=> (<ThemedTitleV2 {...titleProps} text="Refine"/>)}
+      Title={(titleProps) => (
+        <ThemedTitleV2 {...titleProps} text="Ogive Labs" />
+      )}
     >
-        {children}
-     </ThemedLayoutV2>
-  )
-}
+      {children}
+    </ThemedLayoutV2>
+  );
+};
 
-export default Layout
+export default Layout;
